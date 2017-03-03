@@ -3,13 +3,14 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Do It-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="DoIt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="TasksViewController" customModule="DoIt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -47,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="972" y="48.125937031484263"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Task View Controller-->
         <scene sceneID="HGU-W6-rgV">
             <objects>
-                <viewController id="3wL-ic-KJp" sceneMemberID="viewController">
+                <viewController id="3wL-ic-KJp" customClass="CreateTaskViewController" customModule="DoIt" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="avI-Zg-VzD"/>
                         <viewControllerLayoutGuide type="bottom" id="xYd-iO-oXk"/>
@@ -58,12 +59,54 @@
                     <view key="view" contentMode="scaleToFill" id="ebz-4Y-eY1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVH-h5-xxl">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bsr-N1-WT1">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Important:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uha-Bp-4Go">
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="BCA-cE-K54"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xkS-Az-gLG">
+                                <state key="normal" title="Add"/>
+                                <connections>
+                                    <action selector="addTapped:" destination="3wL-ic-KJp" eventType="touchUpInside" id="jpj-Gl-pyo"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bsr-N1-WT1" firstAttribute="centerX" secondItem="ebz-4Y-eY1" secondAttribute="centerX" id="7nC-IQ-hK7"/>
+                            <constraint firstItem="bsr-N1-WT1" firstAttribute="top" secondItem="mVH-h5-xxl" secondAttribute="bottom" constant="10" id="ENZ-Vo-bvn"/>
+                            <constraint firstItem="xkS-Az-gLG" firstAttribute="top" secondItem="BCA-cE-K54" secondAttribute="bottom" constant="30" id="Hb3-X9-Tb1"/>
+                            <constraint firstItem="Uha-Bp-4Go" firstAttribute="centerX" secondItem="ebz-4Y-eY1" secondAttribute="centerX" id="He7-aa-1A9"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="bsr-N1-WT1" secondAttribute="trailing" constant="40" id="KbZ-MD-T97"/>
+                            <constraint firstItem="mVH-h5-xxl" firstAttribute="centerX" secondItem="ebz-4Y-eY1" secondAttribute="centerX" id="P9b-dL-t5x"/>
+                            <constraint firstItem="mVH-h5-xxl" firstAttribute="top" secondItem="avI-Zg-VzD" secondAttribute="bottom" constant="15" id="d4l-0Y-lHv"/>
+                            <constraint firstItem="bsr-N1-WT1" firstAttribute="leading" secondItem="ebz-4Y-eY1" secondAttribute="leadingMargin" constant="40" id="eQV-YW-Nht"/>
+                            <constraint firstItem="xkS-Az-gLG" firstAttribute="centerX" secondItem="ebz-4Y-eY1" secondAttribute="centerX" id="nKZ-kb-3ix"/>
+                            <constraint firstItem="BCA-cE-K54" firstAttribute="centerX" secondItem="ebz-4Y-eY1" secondAttribute="centerX" id="qNs-Tq-NYj"/>
+                            <constraint firstItem="Uha-Bp-4Go" firstAttribute="top" secondItem="bsr-N1-WT1" secondAttribute="bottom" constant="30" id="yj0-e8-bxq"/>
+                            <constraint firstItem="BCA-cE-K54" firstAttribute="top" secondItem="Uha-Bp-4Go" secondAttribute="bottom" constant="10" id="zkP-lU-Wrp"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="importantSwitch" destination="BCA-cE-K54" id="GYG-5T-lXT"/>
+                        <outlet property="taskNameTextField" destination="bsr-N1-WT1" id="U53-iH-y0d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ghb-xS-a1a" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1774" y="48"/>
+            <point key="canvasLocation" x="1773.5999999999999" y="47.226386806596707"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="odK-KD-zaF">
