@@ -15,7 +15,6 @@
 		527345A31E687F6600189A91 /* DoIt.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 527345A11E687F6600189A91 /* DoIt.xcdatamodeld */; };
 		527345A51E687F6600189A91 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 527345A41E687F6600189A91 /* Assets.xcassets */; };
 		527345A81E687F6600189A91 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 527345A61E687F6600189A91 /* LaunchScreen.storyboard */; };
-		527345B01E68843B00189A91 /* task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527345AF1E68843B00189A91 /* task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +28,6 @@
 		527345A41E687F6600189A91 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		527345A71E687F6600189A91 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		527345A91E687F6600189A91 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		527345AF1E68843B00189A91 /* task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = task.swift; path = "../../Emoji Dictionary/task.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +64,6 @@
 				5273459C1E687F6600189A91 /* TasksViewController.swift */,
 				526CC2CA1E69D804000ADCD1 /* CreateTaskViewController.swift */,
 				524B557E1E70766F00816C30 /* CompleteTaskViewController.swift */,
-				527345AF1E68843B00189A91 /* task.swift */,
 				5273459E1E687F6600189A91 /* Main.storyboard */,
 				527345A41E687F6600189A91 /* Assets.xcassets */,
 				527345A61E687F6600189A91 /* LaunchScreen.storyboard */,
@@ -148,7 +145,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				527345B01E68843B00189A91 /* task.swift in Sources */,
 				527345A31E687F6600189A91 /* DoIt.xcdatamodeld in Sources */,
 				524B557F1E70766F00816C30 /* CompleteTaskViewController.swift in Sources */,
 				5273459D1E687F6600189A91 /* TasksViewController.swift in Sources */,
