@@ -27,6 +27,7 @@ class CreateTaskViewController: UIViewController {
         // create a task from the outlets information
         
         let task = Task()
+        
         task.name = taskNameTextField.text!
         task.important = importantSwitch.isOn
         
@@ -36,9 +37,7 @@ class CreateTaskViewController: UIViewController {
         previousVC.tasks.append(task)
         previousVC.tableView.reloadData()
         navigationController!.popViewController(animated: true)
-        
-        
-    }
+        }
   
 
 }
